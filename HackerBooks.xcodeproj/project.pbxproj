@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C3BDCC71ABC9FE60018CE41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BDCC61ABC9FE60018CE41 /* main.m */; };
+		2C3BDCCA1ABC9FE60018CE41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BDCC91ABC9FE60018CE41 /* AppDelegate.m */; };
+		2C3BDCCC1ABC9FE60018CE41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BDCCB1ABC9FE60018CE41 /* Images.xcassets */; };
+		2C3BDCCF1ABC9FE60018CE41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BDCCD1ABC9FE60018CE41 /* LaunchScreen.xib */; };
+		2C3BDCDB1ABC9FE70018CE41 /* HackerBooksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BDCDA1ABC9FE70018CE41 /* HackerBooksTests.m */; };
+		2C3BDCE61ABCA11F0018CE41 /* LARBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BDCE51ABCA11E0018CE41 /* LARBook.m */; };
+		2C3BDCEA1ABCA8120018CE41 /* LARLibraryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BDCE91ABCA8120018CE41 /* LARLibraryModel.m */; };
+		2C6C4F281AC2C8CE0085B9E1 /* LARPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6C4F261AC2C8CE0085B9E1 /* LARPDFViewController.m */; };
+		2C6C4F291AC2C8CE0085B9E1 /* LARPDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6C4F271AC2C8CE0085B9E1 /* LARPDFViewController.xib */; };
+		2CF055801ABDCE8500CDDEFF /* LARLibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF0557E1ABDCE8500CDDEFF /* LARLibraryTableViewController.m */; };
+		2CF055811ABDCE8500CDDEFF /* LARLibraryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0557F1ABDCE8500CDDEFF /* LARLibraryTableViewController.xib */; };
+		2CF055891ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF055871ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.m */; };
+		2CF0558A1ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055881ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.xib */; };
+		2CF055931ABE306700CDDEFF /* 721-bookmarks-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0558B1ABE306700CDDEFF /* 721-bookmarks-selected.png */; };
+		2CF055941ABE306700CDDEFF /* 721-bookmarks-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0558C1ABE306700CDDEFF /* 721-bookmarks-selected@2x.png */; };
+		2CF055951ABE306700CDDEFF /* 721-bookmarks.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0558D1ABE306700CDDEFF /* 721-bookmarks.png */; };
+		2CF055961ABE306700CDDEFF /* 721-bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0558E1ABE306700CDDEFF /* 721-bookmarks@2x.png */; };
+		2CF055971ABE306700CDDEFF /* 726-star-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0558F1ABE306700CDDEFF /* 726-star-selected.png */; };
+		2CF055981ABE306700CDDEFF /* 726-star-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055901ABE306700CDDEFF /* 726-star-selected@2x.png */; };
+		2CF055991ABE306700CDDEFF /* 726-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055911ABE306700CDDEFF /* 726-star.png */; };
+		2CF0559A1ABE306700CDDEFF /* 726-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055921ABE306700CDDEFF /* 726-star@2x.png */; };
+		2CF0559F1ABE47C600CDDEFF /* LARBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF0559D1ABE47C600CDDEFF /* LARBookViewController.m */; };
+		2CF055A01ABE47C600CDDEFF /* LARBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0559E1ABE47C600CDDEFF /* LARBookViewController.xib */; };
+		2CF055A21ABE47F200CDDEFF /* LARBookViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055A11ABE47F200CDDEFF /* LARBookViewController~iphone.xib */; };
+		2CF055AA1ABECB3800CDDEFF /* 747-tag-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055A61ABECB3800CDDEFF /* 747-tag-selected.png */; };
+		2CF055AB1ABECB3800CDDEFF /* 747-tag-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055A71ABECB3800CDDEFF /* 747-tag-selected@2x.png */; };
+		2CF055AC1ABECB3800CDDEFF /* 747-tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055A81ABECB3800CDDEFF /* 747-tag.png */; };
+		2CF055AD1ABECB3800CDDEFF /* 747-tag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055A91ABECB3800CDDEFF /* 747-tag@2x.png */; };
+		2CF055B21ABECBC400CDDEFF /* 779-users-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055AE1ABECBC400CDDEFF /* 779-users-selected.png */; };
+		2CF055B31ABECBC400CDDEFF /* 779-users-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055AF1ABECBC400CDDEFF /* 779-users-selected@2x.png */; };
+		2CF055B41ABECBC400CDDEFF /* 779-users.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055B01ABECBC400CDDEFF /* 779-users.png */; };
+		2CF055B51ABECBC400CDDEFF /* 779-users@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF055B11ABECBC400CDDEFF /* 779-users@2x.png */; };
+		2CFB033A1AC8B30E001520AD /* ibooks_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFB03391AC8B30E001520AD /* ibooks_logo@2x.png */; };
+		2CFB033C1AC8B315001520AD /* ibooks_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFB033B1AC8B315001520AD /* ibooks_logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C3BDCD51ABC9FE60018CE41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C3BDCB91ABC9FE60018CE41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C3BDCC01ABC9FE60018CE41;
+			remoteInfo = HackerBooks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C0256BD1AC8377100F9BBC0 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = ../Settings.h; sourceTree = "<group>"; };
+		2C3BDCC11ABC9FE60018CE41 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3BDCC51ABC9FE60018CE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C3BDCC61ABC9FE60018CE41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C3BDCC81ABC9FE60018CE41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C3BDCC91ABC9FE60018CE41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C3BDCCB1ABC9FE60018CE41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C3BDCCE1ABC9FE60018CE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2C3BDCD41ABC9FE60018CE41 /* HackerBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3BDCD91ABC9FE70018CE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C3BDCDA1ABC9FE70018CE41 /* HackerBooksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackerBooksTests.m; sourceTree = "<group>"; };
+		2C3BDCE41ABCA11E0018CE41 /* LARBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARBook.h; sourceTree = "<group>"; };
+		2C3BDCE51ABCA11E0018CE41 /* LARBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LARBook.m; sourceTree = "<group>"; };
+		2C3BDCE81ABCA8120018CE41 /* LARLibraryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARLibraryModel.h; sourceTree = "<group>"; };
+		2C3BDCE91ABCA8120018CE41 /* LARLibraryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LARLibraryModel.m; sourceTree = "<group>"; };
+		2C6C4F251AC2C8CE0085B9E1 /* LARPDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARPDFViewController.h; sourceTree = "<group>"; };
+		2C6C4F261AC2C8CE0085B9E1 /* LARPDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LARPDFViewController.m; sourceTree = "<group>"; };
+		2C6C4F271AC2C8CE0085B9E1 /* LARPDFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LARPDFViewController.xib; sourceTree = "<group>"; };
+		2CF0557D1ABDCE8500CDDEFF /* LARLibraryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARLibraryTableViewController.h; sourceTree = "<group>"; };
+		2CF0557E1ABDCE8500CDDEFF /* LARLibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LARLibraryTableViewController.m; sourceTree = "<group>"; };
+		2CF0557F1ABDCE8500CDDEFF /* LARLibraryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LARLibraryTableViewController.xib; sourceTree = "<group>"; };
+		2CF055861ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARLibraryCellTableViewCell.h; sourceTree = "<group>"; };
+		2CF055871ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LARLibraryCellTableViewCell.m; sourceTree = "<group>"; };
+		2CF055881ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LARLibraryCellTableViewCell.xib; sourceTree = "<group>"; };
+		2CF0558B1ABE306700CDDEFF /* 721-bookmarks-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks-selected.png"; sourceTree = "<group>"; };
+		2CF0558C1ABE306700CDDEFF /* 721-bookmarks-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks-selected@2x.png"; sourceTree = "<group>"; };
+		2CF0558D1ABE306700CDDEFF /* 721-bookmarks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks.png"; sourceTree = "<group>"; };
+		2CF0558E1ABE306700CDDEFF /* 721-bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks@2x.png"; sourceTree = "<group>"; };
+		2CF0558F1ABE306700CDDEFF /* 726-star-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star-selected.png"; sourceTree = "<group>"; };
+		2CF055901ABE306700CDDEFF /* 726-star-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star-selected@2x.png"; sourceTree = "<group>"; };
+		2CF055911ABE306700CDDEFF /* 726-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star.png"; sourceTree = "<group>"; };
+		2CF055921ABE306700CDDEFF /* 726-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@2x.png"; sourceTree = "<group>"; };
+		2CF0559C1ABE47C600CDDEFF /* LARBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARBookViewController.h; sourceTree = "<group>"; };
+		2CF0559D1ABE47C600CDDEFF /* LARBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LARBookViewController.m; sourceTree = "<group>"; };
+		2CF0559E1ABE47C600CDDEFF /* LARBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LARBookViewController.xib; sourceTree = "<group>"; };
+		2CF055A11ABE47F200CDDEFF /* LARBookViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "LARBookViewController~iphone.xib"; sourceTree = "<group>"; };
+		2CF055A61ABECB3800CDDEFF /* 747-tag-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "747-tag-selected.png"; sourceTree = "<group>"; };
+		2CF055A71ABECB3800CDDEFF /* 747-tag-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "747-tag-selected@2x.png"; sourceTree = "<group>"; };
+		2CF055A81ABECB3800CDDEFF /* 747-tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "747-tag.png"; sourceTree = "<group>"; };
+		2CF055A91ABECB3800CDDEFF /* 747-tag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "747-tag@2x.png"; sourceTree = "<group>"; };
+		2CF055AE1ABECBC400CDDEFF /* 779-users-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "779-users-selected.png"; sourceTree = "<group>"; };
+		2CF055AF1ABECBC400CDDEFF /* 779-users-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "779-users-selected@2x.png"; sourceTree = "<group>"; };
+		2CF055B01ABECBC400CDDEFF /* 779-users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "779-users.png"; sourceTree = "<group>"; };
+		2CF055B11ABECBC400CDDEFF /* 779-users@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "779-users@2x.png"; sourceTree = "<group>"; };
+		2CFB03391AC8B30E001520AD /* ibooks_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ibooks_logo@2x.png"; sourceTree = "<group>"; };
+		2CFB033B1AC8B315001520AD /* ibooks_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibooks_logo.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C3BDCBE1ABC9FE60018CE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C3BDCD11ABC9FE60018CE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C3BDCB81ABC9FE60018CE41 = {
+			isa = PBXGroup;
+			children = (
+				2C3BDCC31ABC9FE60018CE41 /* HackerBooks */,
+				2CF055821ABDCE9600CDDEFF /* Controllers */,
+				2C3BDCE71ABCA1240018CE41 /* Models */,
+				2CF0559B1ABE306F00CDDEFF /* Resources */,
+				2C3BDCD71ABC9FE70018CE41 /* HackerBooksTests */,
+				2C3BDCC21ABC9FE60018CE41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C3BDCC21ABC9FE60018CE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C3BDCC11ABC9FE60018CE41 /* HackerBooks.app */,
+				2C3BDCD41ABC9FE60018CE41 /* HackerBooksTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C3BDCC31ABC9FE60018CE41 /* HackerBooks */ = {
+			isa = PBXGroup;
+			children = (
+				2C3BDCC81ABC9FE60018CE41 /* AppDelegate.h */,
+				2C3BDCC91ABC9FE60018CE41 /* AppDelegate.m */,
+				2C0256BD1AC8377100F9BBC0 /* Settings.h */,
+				2C3BDCCB1ABC9FE60018CE41 /* Images.xcassets */,
+				2C3BDCCD1ABC9FE60018CE41 /* LaunchScreen.xib */,
+				2C3BDCC41ABC9FE60018CE41 /* Supporting Files */,
+			);
+			path = HackerBooks;
+			sourceTree = "<group>";
+		};
+		2C3BDCC41ABC9FE60018CE41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C3BDCC51ABC9FE60018CE41 /* Info.plist */,
+				2C3BDCC61ABC9FE60018CE41 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C3BDCD71ABC9FE70018CE41 /* HackerBooksTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C3BDCDA1ABC9FE70018CE41 /* HackerBooksTests.m */,
+				2C3BDCD81ABC9FE70018CE41 /* Supporting Files */,
+			);
+			path = HackerBooksTests;
+			sourceTree = "<group>";
+		};
+		2C3BDCD81ABC9FE70018CE41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C3BDCD91ABC9FE70018CE41 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C3BDCE71ABCA1240018CE41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C3BDCE41ABCA11E0018CE41 /* LARBook.h */,
+				2C3BDCE51ABCA11E0018CE41 /* LARBook.m */,
+				2C3BDCE81ABCA8120018CE41 /* LARLibraryModel.h */,
+				2C3BDCE91ABCA8120018CE41 /* LARLibraryModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2CF055821ABDCE9600CDDEFF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C6C4F251AC2C8CE0085B9E1 /* LARPDFViewController.h */,
+				2CF0559C1ABE47C600CDDEFF /* LARBookViewController.h */,
+				2CF0559D1ABE47C600CDDEFF /* LARBookViewController.m */,
+				2CF055861ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.h */,
+				2CF055871ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.m */,
+				2CF055881ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.xib */,
+				2CF0557D1ABDCE8500CDDEFF /* LARLibraryTableViewController.h */,
+				2CF0557E1ABDCE8500CDDEFF /* LARLibraryTableViewController.m */,
+				2CF0557F1ABDCE8500CDDEFF /* LARLibraryTableViewController.xib */,
+				2CF0559E1ABE47C600CDDEFF /* LARBookViewController.xib */,
+				2CF055A11ABE47F200CDDEFF /* LARBookViewController~iphone.xib */,
+				2C6C4F261AC2C8CE0085B9E1 /* LARPDFViewController.m */,
+				2C6C4F271AC2C8CE0085B9E1 /* LARPDFViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2CF0559B1ABE306F00CDDEFF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CFB033B1AC8B315001520AD /* ibooks_logo.png */,
+				2CFB03391AC8B30E001520AD /* ibooks_logo@2x.png */,
+				2CF055AE1ABECBC400CDDEFF /* 779-users-selected.png */,
+				2CF055AF1ABECBC400CDDEFF /* 779-users-selected@2x.png */,
+				2CF055B01ABECBC400CDDEFF /* 779-users.png */,
+				2CF055B11ABECBC400CDDEFF /* 779-users@2x.png */,
+				2CF0558B1ABE306700CDDEFF /* 721-bookmarks-selected.png */,
+				2CF0558C1ABE306700CDDEFF /* 721-bookmarks-selected@2x.png */,
+				2CF0558D1ABE306700CDDEFF /* 721-bookmarks.png */,
+				2CF0558E1ABE306700CDDEFF /* 721-bookmarks@2x.png */,
+				2CF0558F1ABE306700CDDEFF /* 726-star-selected.png */,
+				2CF055901ABE306700CDDEFF /* 726-star-selected@2x.png */,
+				2CF055911ABE306700CDDEFF /* 726-star.png */,
+				2CF055921ABE306700CDDEFF /* 726-star@2x.png */,
+				2CF055A61ABECB3800CDDEFF /* 747-tag-selected.png */,
+				2CF055A71ABECB3800CDDEFF /* 747-tag-selected@2x.png */,
+				2CF055A81ABECB3800CDDEFF /* 747-tag.png */,
+				2CF055A91ABECB3800CDDEFF /* 747-tag@2x.png */,
+			);
+			name = Resources;
+			path = HackerBooks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C3BDCC01ABC9FE60018CE41 /* HackerBooks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C3BDCDE1ABC9FE70018CE41 /* Build configuration list for PBXNativeTarget "HackerBooks" */;
+			buildPhases = (
+				2C3BDCBD1ABC9FE60018CE41 /* Sources */,
+				2C3BDCBE1ABC9FE60018CE41 /* Frameworks */,
+				2C3BDCBF1ABC9FE60018CE41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackerBooks;
+			productName = HackerBooks;
+			productReference = 2C3BDCC11ABC9FE60018CE41 /* HackerBooks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C3BDCD31ABC9FE60018CE41 /* HackerBooksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C3BDCE11ABC9FE70018CE41 /* Build configuration list for PBXNativeTarget "HackerBooksTests" */;
+			buildPhases = (
+				2C3BDCD01ABC9FE60018CE41 /* Sources */,
+				2C3BDCD11ABC9FE60018CE41 /* Frameworks */,
+				2C3BDCD21ABC9FE60018CE41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C3BDCD61ABC9FE60018CE41 /* PBXTargetDependency */,
+			);
+			name = HackerBooksTests;
+			productName = HackerBooksTests;
+			productReference = 2C3BDCD41ABC9FE60018CE41 /* HackerBooksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C3BDCB91ABC9FE60018CE41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Ivan;
+				TargetAttributes = {
+					2C3BDCC01ABC9FE60018CE41 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					2C3BDCD31ABC9FE60018CE41 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 2C3BDCC01ABC9FE60018CE41;
+					};
+				};
+			};
+			buildConfigurationList = 2C3BDCBC1ABC9FE60018CE41 /* Build configuration list for PBXProject "HackerBooks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C3BDCB81ABC9FE60018CE41;
+			productRefGroup = 2C3BDCC21ABC9FE60018CE41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C3BDCC01ABC9FE60018CE41 /* HackerBooks */,
+				2C3BDCD31ABC9FE60018CE41 /* HackerBooksTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C3BDCBF1ABC9FE60018CE41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C3BDCCF1ABC9FE60018CE41 /* LaunchScreen.xib in Resources */,
+				2CF055971ABE306700CDDEFF /* 726-star-selected.png in Resources */,
+				2CF0559A1ABE306700CDDEFF /* 726-star@2x.png in Resources */,
+				2CF055961ABE306700CDDEFF /* 721-bookmarks@2x.png in Resources */,
+				2CF055AD1ABECB3800CDDEFF /* 747-tag@2x.png in Resources */,
+				2CF055981ABE306700CDDEFF /* 726-star-selected@2x.png in Resources */,
+				2C6C4F291AC2C8CE0085B9E1 /* LARPDFViewController.xib in Resources */,
+				2CF055AB1ABECB3800CDDEFF /* 747-tag-selected@2x.png in Resources */,
+				2CF055B51ABECBC400CDDEFF /* 779-users@2x.png in Resources */,
+				2CF055931ABE306700CDDEFF /* 721-bookmarks-selected.png in Resources */,
+				2CF055A01ABE47C600CDDEFF /* LARBookViewController.xib in Resources */,
+				2CF055AA1ABECB3800CDDEFF /* 747-tag-selected.png in Resources */,
+				2CF055811ABDCE8500CDDEFF /* LARLibraryTableViewController.xib in Resources */,
+				2C3BDCCC1ABC9FE60018CE41 /* Images.xcassets in Resources */,
+				2CFB033C1AC8B315001520AD /* ibooks_logo.png in Resources */,
+				2CF055991ABE306700CDDEFF /* 726-star.png in Resources */,
+				2CF055A21ABE47F200CDDEFF /* LARBookViewController~iphone.xib in Resources */,
+				2CF055B41ABECBC400CDDEFF /* 779-users.png in Resources */,
+				2CF055941ABE306700CDDEFF /* 721-bookmarks-selected@2x.png in Resources */,
+				2CF055AC1ABECB3800CDDEFF /* 747-tag.png in Resources */,
+				2CF055B21ABECBC400CDDEFF /* 779-users-selected.png in Resources */,
+				2CF0558A1ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.xib in Resources */,
+				2CF055B31ABECBC400CDDEFF /* 779-users-selected@2x.png in Resources */,
+				2CFB033A1AC8B30E001520AD /* ibooks_logo@2x.png in Resources */,
+				2CF055951ABE306700CDDEFF /* 721-bookmarks.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C3BDCD21ABC9FE60018CE41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C3BDCBD1ABC9FE60018CE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C3BDCCA1ABC9FE60018CE41 /* AppDelegate.m in Sources */,
+				2C3BDCEA1ABCA8120018CE41 /* LARLibraryModel.m in Sources */,
+				2C3BDCE61ABCA11F0018CE41 /* LARBook.m in Sources */,
+				2CF055891ABE2E7000CDDEFF /* LARLibraryCellTableViewCell.m in Sources */,
+				2CF055801ABDCE8500CDDEFF /* LARLibraryTableViewController.m in Sources */,
+				2C6C4F281AC2C8CE0085B9E1 /* LARPDFViewController.m in Sources */,
+				2CF0559F1ABE47C600CDDEFF /* LARBookViewController.m in Sources */,
+				2C3BDCC71ABC9FE60018CE41 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C3BDCD01ABC9FE60018CE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C3BDCDB1ABC9FE70018CE41 /* HackerBooksTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C3BDCD61ABC9FE60018CE41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C3BDCC01ABC9FE60018CE41 /* HackerBooks */;
+			targetProxy = 2C3BDCD51ABC9FE60018CE41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C3BDCCD1ABC9FE60018CE41 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C3BDCCE1ABC9FE60018CE41 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C3BDCDC1ABC9FE70018CE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C3BDCDD1ABC9FE70018CE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C3BDCDF1ABC9FE70018CE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HackerBooks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C3BDCE01ABC9FE70018CE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HackerBooks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C3BDCE21ABC9FE70018CE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HackerBooksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackerBooks.app/HackerBooks";
+			};
+			name = Debug;
+		};
+		2C3BDCE31ABC9FE70018CE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HackerBooksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackerBooks.app/HackerBooks";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C3BDCBC1ABC9FE60018CE41 /* Build configuration list for PBXProject "HackerBooks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3BDCDC1ABC9FE70018CE41 /* Debug */,
+				2C3BDCDD1ABC9FE70018CE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C3BDCDE1ABC9FE70018CE41 /* Build configuration list for PBXNativeTarget "HackerBooks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3BDCDF1ABC9FE70018CE41 /* Debug */,
+				2C3BDCE01ABC9FE70018CE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C3BDCE11ABC9FE70018CE41 /* Build configuration list for PBXNativeTarget "HackerBooksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3BDCE21ABC9FE70018CE41 /* Debug */,
+				2C3BDCE31ABC9FE70018CE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C3BDCB91ABC9FE60018CE41 /* Project object */;
+}
