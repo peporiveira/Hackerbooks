@@ -2,8 +2,8 @@
 //  Settings.h
 //  HackerBooks
 //
-//  Created by Ivan on 29/03/15.
-//  Copyright (c) 2015 Ivan. All rights reserved.
+//  Created by Luis Aparicio Ramirez on 20/3/15.
+//  Copyright (c) 2015 iKale. All rights reserved.
 //
 
 

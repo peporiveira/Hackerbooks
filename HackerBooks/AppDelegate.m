@@ -2,15 +2,15 @@
 //  AppDelegate.m
 //  HackerBooks
 //
-//  Created by Ivan on 20/3/15.
-//  Copyright (c) 2015 Ivan. All rights reserved.
+//  Created by Luis Aparicio Ramirez on 20/3/15.
+//  Copyright (c) 2015 iKale. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "IAALibraryModel.h"
+#import "LARLibraryModel.h"
 
-#import "IAABookViewController.h"
-#import "IAALibraryTableViewController.h"
+#import "LARBookViewController.h"
+#import "LARLibraryTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,9 +24,7 @@
     // Override point for customization after application launch.
     
     //creamos el modelo
-    IAALibraryModel *libraryModel=[[IAALibraryModel alloc]init];
-    
-    
+    LARLibraryModel *libraryModel=[[LARLibraryModel alloc]init];
     
     // crear un cola para descargar los pdfs del modelo
     dispatch_queue_t loadPDFs = dispatch_queue_create("loadPDFs", 0);
@@ -37,21 +35,17 @@
 
         });
 
-    
-    
-
     //miramos en que dispositivo estamos
     UIViewController *rootVC = nil;
     
-    if ([[UIDevice currentDevice]userInterfaceIdiom]==UIUserInterfaceIdiomPad)
-    {
+    if ([[UIDevice currentDevice]userInterfaceIdiom]==UIUserInterfaceIdiomPad){
+        
         //pantalla grande
         
         rootVC=[self rootViewControllerForPadWithModel:libraryModel];
         
+    }else{
         
-    }
-    else{
         //pantalla pequeña
         rootVC=[self rootViewControllerForPhoneWithModel:libraryModel];
         
@@ -67,10 +61,9 @@
     return YES;
 }
 
--(UIViewController *) rootViewControllerForPhoneWithModel: (IAALibraryModel *)libraryModel
-{
+-(UIViewController *) rootViewControllerForPhoneWithModel: (LARLibraryModel *)libraryModel{
     //creamos una instancia de los controladores
-     IAALibraryTableViewController *libraryVC = [[IAALibraryTableViewController alloc]initWithLibrary:libraryModel style:UITableViewStylePlain];
+     LARLibraryTableViewController *libraryVC = [[LARLibraryTableViewController alloc]initWithLibrary:libraryModel style:UITableViewStylePlain];
 
     
     //Creamos un navigation controller para cada controlador
@@ -82,13 +75,12 @@
     return navLibraryVC;
 }
 
-- (UIViewController *)rootViewControllerForPadWithModel: (IAALibraryModel *)libraryModel
-
-{
-    // Controladores
-    IAALibraryTableViewController *libraryVC = [[IAALibraryTableViewController alloc]initWithLibrary:libraryModel style:UITableViewStylePlain];
+- (UIViewController *)rootViewControllerForPadWithModel: (LARLibraryModel *)libraryModel{
     
-    IAABookViewController *bookVC = [[IAABookViewController alloc] initWithBook:[libraryVC lastSelectedBook]];
+    // Controladores
+    LARLibraryTableViewController *libraryVC = [[LARLibraryTableViewController alloc]initWithLibrary:libraryModel style:UITableViewStylePlain];
+    
+    LARBookViewController *bookVC = [[LARBookViewController alloc] initWithBook:[libraryVC lastSelectedBook]];
     
     // Combinadores
     UINavigationController *BookNav = [[UINavigationController alloc] initWithRootViewController:bookVC];

@@ -20,14 +20,15 @@
 
 @end
 
-@interface LARLibraryTableViewController : UITableViewController <LrLibraryTableViewControllerDelegate>
+@interface LARLibraryTableViewController : UITableViewController <LARLibraryTableViewControllerDelegate>
 
-@property (strong,nonatomic) IAALibraryModel *modelLibrary;
-@property (weak, nonatomic) id<IAALibraryTableViewControllerDelegate> delegate;
+@property (strong,nonatomic) LARLibraryModel *modelLibrary;
+@property (weak, nonatomic) id<LARLibraryTableViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITableView *libraryTableView;
 
-- (IAABook *)lastSelectedBook;
+- (LARBook *)lastSelectedBook;
 
--(id) initWithLibrary: (IAALibraryModel *) aLibrary
+-(id) initWithLibrary: (LARLibraryModel *) aLibrary
               style: (UITableViewStyle) aStyle;
+
 @end

@@ -1,25 +1,25 @@
 //
-//  IAAPDFViewController.m
+//  LARPDFViewController.m
 //  HackerBooks
 //
 //  Created by Luis Aparicio Ramirez on 20/3/15.
 //  Copyright (c) 2015 iKale. All rights reserved.
 //
 
-#import "IAAPDFViewController.h"
+#import "LARPDFViewController.h"
 #import "Settings.h"
 
-@interface IAAPDFViewController ()
+@interface LARPDFViewController ()
 
 @end
 
-@implementation IAAPDFViewController
+@implementation LARPDFViewController
 
 
--(id) initWithBook: (IAABook *) aBook
-{
-    if (self=[super init])
-    {
+-(id) initWithBook: (LARBook *) aBook{
+    
+    if (self=[super init]){
+        
         _book=aBook;
         self.title=aBook.title;
     }
@@ -32,14 +32,9 @@
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
+-(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     
-    
-    
- //   NSData *data = [self.PDF dataUsingEncoding:NSUTF8StringEncoding];
- //   [webView loadData:data MIMEType:@"application/xhtml+xml" textEncodingName:@"utf-8" baseURL:baseUrl];
     
     //asignamos delegado
     self.webView.delegate = self;
@@ -57,20 +52,16 @@
 }
 
 
--(void) syncWithModel
-{
+-(void) syncWithModel{
     
     [self.activityView startAnimating];
-    
-    
+ 
     
     // crear un cola para descargar los pdfs del modelo
     dispatch_queue_t loadPDF = dispatch_queue_create("loadPDF", 0);
     
-    
     dispatch_async(loadPDF, ^{
         NSData *data = self.book.bookPDF;
-
             
             // se ejecuta en primer plano
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -83,14 +74,6 @@
 
         
        self.title=self.book.title;
-        
-
-
-    
-    
-    
-    //NSData *data = [NSData dataWithContentsOfFile:[self.book bookPDFFileName]];
-    
 
 }
 
@@ -100,22 +83,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 #pragma mark - notifications
 
--(void) notifyBookDidChange: (NSNotification *) notification
-{
+-(void) notifyBookDidChange: (NSNotification *) notification{
+    
     NSDictionary *dict = [notification userInfo];
     
-    IAABook *newbook = [dict objectForKey:@"NEW_BOOK"];
+    LARBook *newbook = [dict objectForKey:@"NEW_BOOK"];
     
     //actualizamos el modelo
     self.book=newbook;
@@ -126,29 +100,29 @@
 
 
 #pragma mark - UIWebViewDelegate
--(void) webViewDidFinishLoad:(UIWebView *)webView
-{
+-(void) webViewDidFinishLoad:(UIWebView *)webView{
+    
     [self.activityView setHidden:YES];
 }
 
 -(BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request
- navigationType:(UIWebViewNavigationType)navigationType
-{
+ navigationType:(UIWebViewNavigationType)navigationType{
+    
     if ((navigationType==UIWebViewNavigationTypeLinkClicked) ||
-        (navigationType==UIWebViewNavigationTypeFormSubmitted))
-    {
+        (navigationType==UIWebViewNavigationTypeFormSubmitted)){
+        
         return false;
         
-    }
-    else{
+    }else{
+        
         return true;
     }
 }
 
--(void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
+-(void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    
     [self.activityView setHidden:YES];
     
-    NSLog(@"error fatal de la muerte: %@", error.description);
+    NSLog(@"Error: %@", error.description);
 }
 @end

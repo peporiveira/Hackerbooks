@@ -1,24 +1,23 @@
 //
-//  IAALibraryTableViewController.m
+//  LARLibraryTableViewController.m
 //  HackerBooks
 //
 //  Created by Luis Aparicio Ramirez on 20/3/15.
 //  Copyright (c) 2015 iKale. All rights reserved.
 //
 
-#import "IAALibraryTableViewController.h"
-#import "IAABookViewController.h"
+#import "LARLibraryTableViewController.h"
+#import "LARBookViewController.h"
 #import "Settings.h"
 
-@interface IAALibraryTableViewController ()
+@interface LARLibraryTableViewController ()
 
 @end
 
-@implementation IAALibraryTableViewController
+@implementation LARLibraryTableViewController
 
 
--(id) initWithLibrary:(IAALibraryModel *) aLibrary style:(UITableViewStyle)aStyle
-{
+-(id) initWithLibrary:(LARLibraryModel *) aLibrary style:(UITableViewStyle)aStyle{
 
     if (self=[super initWithStyle:aStyle])
     {
@@ -31,15 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
    }
 
--(void)viewWillAppear:(BOOL)animated
-{
+-(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:YES];
     [self.modelLibrary loadFavorites];
@@ -52,16 +45,12 @@
 
 }
 
--(void) viewDidAppear:(BOOL)animated
-{
+-(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-
-
  
 }
 
--(void) viewDidDisappear:(BOOL)animated
-{
+-(void) viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     
     // Baja en notificaciones
@@ -76,8 +65,7 @@
 
 #pragma mark -  Notifications
 
-- (void)favoritesDidChange:(NSNotification *)aNotification
-{
+- (void)favoritesDidChange:(NSNotification *)aNotification{
     [self.modelLibrary loadFavorites];
     [self.libraryTableView reloadData];
 }
@@ -95,74 +83,70 @@
 
     // Return the number of rows in the section.
     //la seccion 0 es la de favoritos
-    if (section ==0)
-    {
+    if (section ==0){
         NSUInteger cantidad =[self.modelLibrary countOfFavorites];
         
-        
         return cantidad;
-       // return [self.modelLibrary countOfFavorites];
-    }
-    else
-    {
+        
+    }else{
+        
         return [self.modelLibrary bookCountForTag:[self.modelLibrary.tags objectAtIndex:section-1]];
     }
 }
 
--(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (section ==0)
-    {
+-(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    if (section ==0){
+        
         return @"Favorites";
-    }
-    else
-    {
+        
+    }else{
+        
         return [[self.modelLibrary tagAtIndex:section-1]capitalizedString];
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CustomCellIdentifier = @"CustomCellIdentifier ";
-    IAALibraryCellTableViewCell *cell = (IAALibraryCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier: CustomCellIdentifier];
     
-   
+    static NSString *CustomCellIdentifier = @"CustomCellIdentifier ";
+    LARLibraryCellTableViewCell *cell = (LARLibraryCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier: CustomCellIdentifier];
+    
     // Configuramos la celda...
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"IAALibraryCellTableViewCell" owner:self options:nil];
-        cell = (IAALibraryCellTableViewCell *)[nib objectAtIndex:0];
+    
+    if (cell == nil){
+        
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LARLibraryCellTableViewCell" owner:self options:nil];
+        cell = (LARLibraryCellTableViewCell *)[nib objectAtIndex:0];
     }
     
     //averiguamos el libro que corresponde a la celda
     
-    IAABook *book =nil;
+    LARBook *book =nil;
     
-    if (indexPath.section==0)
-    {
+    if (indexPath.section==0){
+        
         book=[self.modelLibrary favoriteBookAtIndex:indexPath.row];
         
-    }
-    else
-    {
+    }else{
+        
         book=[self.modelLibrary bookForTag:[self.modelLibrary tagAtIndex:indexPath.section-1] atIndex:indexPath.row];
         
     }
     
     //si es favorito ponemos una estrella negra, si no una blanca
-    if (book.isFavorite)
-    {
+    if (book.isFavorite){
+        
         cell.bookFavoriteImage.highlighted=YES;
         cell.bookFavoriteImage.image = [UIImage imageNamed:@"726-star"];
         cell.bookFavoriteImage.highlightedImage= [UIImage imageNamed:@"726-star-selected"];
-    }
-    else
-    {   cell.bookFavoriteImage.highlighted=false;
+        
+    }else{
+        
+        cell.bookFavoriteImage.highlighted=false;
         cell.bookFavoriteImage.image = [UIImage imageNamed:@"726-star"];
         cell.bookFavoriteImage.highlightedImage= [UIImage imageNamed:@"726-star"];
         
     }
-
-    
 
     //sincronizamos vista y modelo
     cell.bookTitle.text=book.title;
@@ -194,21 +178,21 @@
     
     return cell;
     
-
     
     // Configure the cell...
     
     return cell;
 }
-- (CGFloat)tableView: (UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+
+- (CGFloat)tableView: (UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     //Devuelve la altura de la fila
     
     return 50;
 }
 
--(void) dealloc
-{
+-(void) dealloc{
+    
     //nos damos de baja de la notificacion
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
@@ -218,27 +202,27 @@
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
   
     //cogemos el libro seleccionado
     
-    IAABook *book =nil;
+    LARBook *book =nil;
     
-    
-    if (indexPath.section==0)
-    {
+    if (indexPath.section==0){
+        
         //cell.bookFavoriteImage.highlighted=YES;
         book=[self.modelLibrary favoriteBookAtIndex:indexPath.row];
-    }
-    else
-    {
+        
+    }else{
+        
         book=[self.modelLibrary bookForTag:[self.modelLibrary tagAtIndex:indexPath.section-1] atIndex:indexPath.row];
     }
     
     // Avisar al delegado
-    [self.delegate IAALibraryTableViewController:self didSelectBook:book];
-
+    
+    [self.delegate LARLibraryTableViewController:self didSelectBook:book];
     
     //mandamos una notificacion
     
@@ -247,32 +231,15 @@
     [[NSNotificationCenter defaultCenter] postNotification:notificationSelectNewCharacter];
     
     
-    /*
-    //creamos la nueva vista y le pasamos el libro
-    IAABookViewController *bookVB = [[IAABookViewController alloc]initWithBook:book];
-    
-    [self.navigationController pushViewController:bookVB animated:YES];
-    
-    */
-    
     [self saveLastSelectedBookAtSection:indexPath.section
                                     row:indexPath.row];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark -  NSUserDefaults
 
-- (NSDictionary *)setDefaults
-{
+- (NSDictionary *)setDefaults{
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     // Por defecto, mostraremos el primero de la seccion de libros (obviando la de favoritos por si no hubiera aun ninguno)
@@ -288,8 +255,8 @@
     
 }
 
-- (void)saveLastSelectedBookAtSection:(NSUInteger)section row:(NSUInteger)row
-{
+- (void)saveLastSelectedBookAtSection:(NSUInteger)section row:(NSUInteger)row{
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@{@"SECTION" : @(section),
                           @"ROW"     : @(row)}
@@ -298,21 +265,19 @@
     [defaults synchronize]; // Por si acaso, que Murphy acecha.
 }
 
-- (IAABook *)lastSelectedBook
-{
+- (LARBook *)lastSelectedBook{
+    
     NSIndexPath *indexPath = nil;
     NSDictionary *coords = nil;
     
     coords = [[NSUserDefaults standardUserDefaults] objectForKey:@"LAST_BOOK_SELECTED"];
     
     if (coords == nil) {
-        // No hay nada bajo la clave LAST_BOOK_SELECTED.
-        // Esto quiere decir que es la primera vez que se llama a la App
-        // Ponemos un valor por defecto: el primero de los libros del listado de Tags
+
         coords = [self setDefaults];
+        
     }else{
-        // Ya hay algo, es decir, en algún momento se guardó.
-        // No hay nada en especial que hacer.
+        
     }
     
     // Transformamos esas coordenadas en un indexpath
@@ -321,30 +286,28 @@
     
     // devolvemos el libro en cuestión
     
-    IAABook *book =nil;
+    LARBook *book =nil;
     
-    if (indexPath.section==0)
-    {
+    if (indexPath.section==0){
+        
         //cell.bookFavoriteImage.highlighted=YES;
         book=[self.modelLibrary favoriteBookAtIndex:indexPath.row];
-    }
-    else
-    {
+        
+    }else{
+        
         book=[self.modelLibrary bookForTag:[self.modelLibrary tagAtIndex:indexPath.section-1] atIndex:indexPath.row];
     }
-    
-
     
     return book;
 }
 
-#pragma mark -  IAALibraryTableViewControllerDelegate
+#pragma mark -  LARLibraryTableViewControllerDelegate
 
--(void) IAALibraryTableViewController: (IAALibraryTableViewController *) aLibraryVC
-                        didSelectBook:(IAABook *) aBook
-{
+-(void) LARLibraryTableViewController: (LARLibraryTableViewController *) aLibraryVC
+                        didSelectBook:(LARBook *) aBook{
+    
     // Crear el controlador
-    IAABookViewController *bookVC = [[IAABookViewController alloc] initWithBook:aBook];
+    LARBookViewController *bookVC = [[LARBookViewController alloc] initWithBook:aBook];
     
     // Hacer un push
     [self.navigationController pushViewController:bookVC
